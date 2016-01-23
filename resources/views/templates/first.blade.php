@@ -16,7 +16,7 @@
         <!-- CSS -->
         <link href="{{ URL::asset('assets/css/app.min.1.css') }}" rel="stylesheet">
         <link href="{{ URL::asset('assets/css/app.min.2.css') }}" rel="stylesheet">
-
+        @yield('page_head')
     </head>
     <body>
         <header id="header" class="clearfix" data-current-skin="blue">
@@ -545,7 +545,7 @@
             </aside>
 
 
-                @yield('content')
+                @yield('page_content')
 
         </section>
 
@@ -644,6 +644,6 @@
         <script src="{{ URL::asset('assets/js/functions.js') }}"></script>
         <script src="{{ URL::asset('assets/js/demo.js') }}"></script>
 
-
+        @yield('page_footer')
     </body>
   </html>
