@@ -561,7 +561,7 @@
             </ul>
         </footer>
 
-        <!-- Page Loader -->
+        <!-- Page Loader 
         <div class="page-loader">
             <div class="preloader pls-blue">
                 <svg class="pl-circular" viewBox="25 25 50 50">
@@ -570,7 +570,7 @@
 
                 <p>Please wait...</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- Older IE warning message -->
         <!--[if lt IE 9]>
