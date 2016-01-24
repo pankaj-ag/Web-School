@@ -12,12 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if(Auth::check())
+    {
+        return view('welcome');
+    }
+    return redirect('login');
 });
 
 Route::get('/foo', function () {
-    return view('foo');
+   return view('foo');
 });
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +37,11 @@ Route::get('/foo', function () {
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
+
 });
